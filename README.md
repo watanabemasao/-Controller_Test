@@ -15,4 +15,4 @@ HTTPメソッドのGET/POST/PATCH/DELETEのリクエストを扱えるController
 ![]( screenShot/PatchHeaders.png)  
 ### DELETE  
 ![]( screenShot/DeleteBody.png)
-![](screenShot/DeleteHeaders.png)
+![](screenShot/DeleteHeaders.png) 
