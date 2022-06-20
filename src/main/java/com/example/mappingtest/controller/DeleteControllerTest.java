@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 public class DeleteControllerTest {
     @DeleteMapping("/names/{id}")
-    public ResponseEntity<Map<String, String>> delete(@PathVariable("id")int id, @Validated@RequestBody DeleteForm form) {
+    public ResponseEntity<Map<String, String>> delete(@PathVariable("id")int id, @Validated @RequestBody DeleteForm form) {
         return ResponseEntity.ok(Map.of("message", "name successfully deleted"));
     }
 }
