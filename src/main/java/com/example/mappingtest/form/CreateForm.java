@@ -1,6 +1,9 @@
 package com.example.mappingtest.form;
 
+import javax.validation.constraints.NotBlank;
+
 public class CreateForm {
+    @NotBlank
     private String name;
 
     public String getName() {
