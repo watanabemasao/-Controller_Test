@@ -19,18 +19,4 @@ public class DeleteControllerTest {
         //   "name": "watanabe"
         // }
     }
-    @DeleteMapping ("Users")
-    public ResponseEntity<String> delete(@Validated @RequestBody DeleteForm form) {
-        URI url = UriComponentsBuilder.fromUriString("http://localhost:8080")
-                .path("/Users/id")
-                .build()
-                .toUri();
-        return ResponseEntity.created(url).body("message2 User successfully deleted");
-        //POST http://localhost:8080/User/  Body : message2 User successfully deleted
-        // (KEY Location : VALUE : http://localhost:8080/Users/id)
-        // JSONのBodyの設定
-        // {
-        //   "name": "watanabe"
-        // }
-    }
 }
