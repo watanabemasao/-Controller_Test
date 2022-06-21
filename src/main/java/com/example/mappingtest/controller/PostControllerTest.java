@@ -28,10 +28,10 @@ public class PostControllerTest {
         //   "name": "masao"
         // }
     }
-    @PostMapping("/show-names")
+    @PostMapping("/full-names")
     public String showNames(@RequestBody PersonForm personForm) {
       return String.format("Full name : %s %s", personForm.getFirstName(), personForm.getLastName());
-      //http://localhost:8080/show-names  Body　Full name : watanabe masao
+      //http://localhost:8080/full-names  Body　Full name : watanabe masao
         // JSONのBodyの設定
         // {
         //   "firstName" :"watanabe",
