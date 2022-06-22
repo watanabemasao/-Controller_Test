@@ -1,6 +1,7 @@
 package com.example.mappingtest.controller;
 
 import com.example.mappingtest.form.CreateForm;
+import com.example.mappingtest.form.PersonForm;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,5 +21,22 @@ public class PostControllerTest {
                 .build()
                 .toUri();
         return ResponseEntity.created(url).body("name successfully created");
+        //POST http://localhost:8080/names/  Body : name successfully created
+        // (KEY Location : VALUE : http://localhost:8080/names/id)
+        // JSONのBodyの設定
+        // {
+        //   "name": "masao"
+        // }
+    }
+    @PostMapping("/full-names")
+    public String showNames(@RequestBody PersonForm personForm) {
+      return String.format("Full name : %s %s", personForm.getFirstName(), personForm.getLastName());
+      //http://localhost:8080/full-names  Body　Full name : watanabe masao
+        // JSONのBodyの設定
+        // {
+        //   "firstName" :"watanabe",
+        //   "lastName" :"masao"
+        // }
+
     }
 }
